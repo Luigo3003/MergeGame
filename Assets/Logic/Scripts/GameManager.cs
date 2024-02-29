@@ -5,8 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-
+    public static GameManager instance; 
     public int CurrentScore { get; set;}
 
     [SerializeField] private TextMeshProUGUI _scoreText;
@@ -18,6 +17,7 @@ public class GameManager : MonoBehaviour
         }
 
         _scoreText.text = CurrentScore.ToString("0");
+        Time.timeScale = 0f;
     }
 
 
